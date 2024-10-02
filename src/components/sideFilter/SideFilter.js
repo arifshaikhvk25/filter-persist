@@ -54,15 +54,15 @@ const SideFilter = ({ setSize, setGender, setColors, colors }) => {
 
     setColors((prevSelectedOptions) => {
       let updatedColor = [];
-      console.log(prevSelectedOptions, "front prev");
+      // console.log(prevSelectedOptions, "front prev");
       if (prevSelectedOptions?.includes(value)) {
-        console.log("front 11");
+        // console.log("front 11");
         updatedColor = prevSelectedOptions?.filter(
           (option) => option !== value
         );
         // return prevSelectedOptions.filter((option) => option !== value);
       } else {
-        console.log("front 222");
+        // console.log("front 222");
         updatedColor = [...prevSelectedOptions, value];
         // return [...prevSelectedOptions, value];
       }
@@ -75,7 +75,7 @@ const SideFilter = ({ setSize, setGender, setColors, colors }) => {
           shallow: true,
         }
       );
-      console.log(updatedColor, "front updatedColor");
+      // console.log(updatedColor, "front updatedColor");
 
       return updatedColor;
     });
@@ -92,7 +92,7 @@ const SideFilter = ({ setSize, setGender, setColors, colors }) => {
     // );
     // return updatedColor;
   };
-  console.log(colors, "front value");
+  // console.log(colors, "front value");
 
   const handleGenderChange = (e) => {
     const value = e.target.value;
